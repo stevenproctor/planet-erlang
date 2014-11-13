@@ -1,0 +1,38 @@
+#planet {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85em;
+}
+
+#main {
+  float: left;
+  width: 67%;
+}
+
+.entry {
+  clear: both;
+}
+
+.aside {
+  float: right;
+  width: 30%;
+}
+
+.article {
+  float: left;
+  width: 65%;
+}
+
+.entry .aside h2 a{
+  color: #A2003E;
+}
+
+#sidebar {
+  float: right;
+  width: 33%;
+}
+
+#footer {
+  clear: both;
+  text-align: right;
+}

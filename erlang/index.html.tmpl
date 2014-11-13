@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <title><TMPL_VAR name></title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="<TMPL_VAR generator ESCAPE="HTML">" />
+    <link href="#" rel="apple-touch-icon" />
+    <link rel="stylesheet" href="static/css/screen.css" media="screen, projection" />
+
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="static/css/ie.css" media="screen, projection" />
+<script type="text/javascript" src="static/js/html5.js"></script>
+<![endif]-->
+
+    <link rel="icon" type="image/vnd.microsoft.icon" href="static/i/favicon.gif" />
+    <link rel="shortcut icon" href="static/i/favicon.gif" />
+    <link rel="alternate" href="http://www.planeterlang.com/atom.xml" type="application/rss+xml" title="Planet = erlang. RSS Feed" />
+  </head>
+  <body>
+    <div id="planet">
+      <div id="main">
+        <div id="main-content">
+
+          <header id="header">
+            <h1><a href="" id="title"><span><TMPL_VAR name></span></a></h1>
+          </header>
+
+          <TMPL_LOOP Items>
+          <section class="entry">
+            <aside class="aside">
+              <!-- <img src="static/i/favicon.gif" alt="Name of the Site" /> -->
+              <h2><a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a></h2>
+              <p>
+                <TMPL_VAR date>
+                <br />
+                <a href="<TMPL_VAR channel_link ESCAPE="HTML">">Feed URL</a>
+              </p>
+            </aside>
+            <article class="article">
+              <h2><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h2>
+              <p>
+                <TMPL_VAR content>
+              </p>
+              <p class="meta"><a href="<TMPL_VAR link ESCAPE="HTML">">Permalink</a></p>
+            </article>
+          </section>
+          </TMPL_LOOP>
+          
+          <footer id="footer">
+            <p>
+              Copyright &copy; 2014, Planet = erlang. No rights reserved.
+              <br />
+              Planet = erlang. is maintained by <a href="http://www.proctor-it.com/">Steven Proctor</a>.
+            </p>
+          </footer>
+
+        </div>
+      </div>
+
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <section id="search">
+            <div>
+              <script>
+                (function() {
+                  var cx = '018205083837551501600:zzitmepxll4';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                      '//www.google.com/cse/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+                })();
+              </script>
+              <gcse:search></gcse:search>
+            </div>
+          </section>
+
+          <section id="about" class="sidebar-list">
+            <h3>About</h3>
+            <p>Planet = erlang. is a meta blog that collects posts from the blogs of various <a href="http://www.planeterlang.com/">Erlang</a> developers and contributors.</p>
+            <p>It is edited by <a href="http://www.proctor-it.com/">Steven Proctor</a>. Please <a href="http://github.com/stevenproctor/planet-erlang">send him a patch</a> if you want your blog to be syndicated here.</p>
+          </section>
+          
+          <section class="sidebar-list">
+            <h3>Subscriptions</h3>
+            <ul>
+              <TMPL_LOOP Channels>
+                <li>
+                  <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
+                </li>
+              </TMPL_LOOP>
+            </ul>
+          </section>
+          
+          <section class="sidebar-list">
+            <h3>Planetarium</h3>
+            <ul>
+              <li><a href="http://planet.lisp.org/">Planet Lisp</a></li>
+              <li><a href="http://www.planetscala.com/">Planet Scala</a></li>
+              <li><a href="http://scheme.dk/planet/">Planet Scheme</a></li>
+              <li><a href="http://planetjdk.org/">Planet JDK</a></li>
+              <li><a href="http://planet.haskell.org/">Planet Haskell</a></li>
+              <li><a href="http://planet.clojure.in/">Planet Clojure</a></li>
+              <li><a href="http://planet.python.org/">Planet Python</a></li>
+              <li><a href="http://planetruby.0x42.net/">Planet Ruby</a></li>
+              <li><a href="http://planet.perl.org/">Planet Perl</a></li>
+            </ul>
+          </section>
+          
+          <section class="sidebar-list">
+            <h3>Syndicate</h3>
+            <ul>
+              <li><a href="http://www.planeterlang.com/atom.xml">RSS</a></li>
+              <li><a href="opml.xml">OPML</a></li>
+              <li><a href="foafroll.xml">FOAF</a></li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+    </div>
+<!-- GOOG Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56649615-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

@@ -1,5 +1,7 @@
 *.tmplc
 .DS_Store
 cache
+erlang/output
+erlang/cache
 *.pluginc
 *.pyc
