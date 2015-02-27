@@ -93,18 +93,16 @@
             <p>Planet Erlang is a meta blog that collects posts from the blogs of various <a href="http://www.planeterlang.com/">Erlang</a> developers and contributors.</p>
             <p>It is edited by <a href="http://www.proctor-it.com/">Proctor</a>. Please <a href="http://github.com/stevenproctor/planet-erlang">send him a patch</a> if you want your blog to be syndicated here.</p>
           </section>
-          
+
           <section class="sidebar-list">
-            <h3>Subscriptions</h3>
+            <h3>Syndicate</h3>
             <ul>
-              <TMPL_LOOP Channels>
-                <li>
-                  <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
-                </li>
-              </TMPL_LOOP>
+              <li><a href="http://www.planeterlang.com/atom.xml">RSS</a></li>
+              <li><a href="opml.xml">OPML</a></li>
+              <li><a href="foafroll.xml">FOAF</a></li>
             </ul>
           </section>
-          
+
           <section class="sidebar-list">
             <h3>Planetarium</h3>
             <ul>
@@ -120,16 +118,17 @@
               <li><a href="http://www.juliabloggers.com/">juliabloggers.com</a></li>
             </ul>
           </section>
-          
+
           <section class="sidebar-list">
-            <h3>Syndicate</h3>
+            <h3>Subscriptions</h3>
             <ul>
-              <li><a href="http://www.planeterlang.com/atom.xml">RSS</a></li>
-              <li><a href="opml.xml">OPML</a></li>
-              <li><a href="foafroll.xml">FOAF</a></li>
+              <TMPL_LOOP Channels>
+                <li>
+                  <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
+                </li>
+              </TMPL_LOOP>
             </ul>
           </section>
-
         </div>
       </div>
     </div>
