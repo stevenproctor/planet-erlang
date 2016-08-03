@@ -1,3 +1,7 @@
+img {
+  max-width: 400px;
+}
+
 #planet {
   margin-left: auto;
   margin-right: auto;
